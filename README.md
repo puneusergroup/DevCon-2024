@@ -1,6 +1,6 @@
 
 
-# Welcome to the Pune User Group DevCon 2024 Repository
+# Welcome to the Pune DevCon 2024 Repository
 
 ## About Pune DevCon 2024
 
