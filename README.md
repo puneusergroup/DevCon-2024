@@ -31,7 +31,7 @@ If you wish to share additional resources or provide feedback, feel free to crea
 
 - **Date:** December 14, 2024
 - **Location:** MCCIA Trade Tower, Pune
-- **Event URL:** [Pune DevCon 2024](https://bit.ly/pug-devcon2024)
+- **Event URL:** [Pune DevCon 2024](https://www.puneusergroup.org/events/devcon2024/)
 
 ## List of Sessions and Speakers
 
