@@ -1,0 +1,16 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@{
+    if(!User?.Identity?.IsAuthenticated ?? false)
+    {
+        <partial name="_IndexAnonymous"></partial>
+    }
+    else
+    {
+        <partial name="_IndexMonthExpenses"></partial>
+    }
+}

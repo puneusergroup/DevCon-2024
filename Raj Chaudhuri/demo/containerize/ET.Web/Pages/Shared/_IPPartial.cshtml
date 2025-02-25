@@ -1,0 +1,19 @@
+@using Microsoft.AspNetCore.Http;
+@using Microsoft.AspNetCore.Http.Features
+
+@{
+    @* var feature = Context.Features.Get<IHttpConnectionFeature>();
+	var localIPAddr = feature?.LocalIpAddress?.ToString(); *@
+    var localIpv4 = System.Net.NetworkInformation.NetworkInterface
+        .GetAllNetworkInterfaces()
+        .Where(n => n.OperationalStatus == System.Net.NetworkInformation.OperationalStatus.Up)
+        .Select(n => n.GetIPProperties())
+        .SelectMany(p => p.UnicastAddresses)
+        .FirstOrDefault(a => 
+            a.Address.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork 
+            && !System.Net.IPAddress.IsLoopback(a.Address)
+        )?.Address.ToString();
+<div>
+    @@@localIpv4
+</div>
+}
